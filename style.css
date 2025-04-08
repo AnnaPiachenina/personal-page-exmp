@@ -1,0 +1,819 @@
+        /* style */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            position: relative;
+            z-index: 2;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+            padding-top: 2em;
+        }
+        
+        h2::before {
+            content: "";
+            position: absolute;
+            width: 1.6em;
+            height: 1.6em;
+            transform: translate(-20%, -30%);
+            border-radius: 50%;
+            background-color: rgba(255, 165, 0, 0.3);
+            z-index: -1;
+        }
+        
+        h1,
+        h3 {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        time {
+            display: block;
+            font-size: 0.9em;
+            color: #555555;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        p {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.5;
+            font-size: 1em;
+            color: #555555;
+        }
+        /* flex box -- header */
+        /* header items */
+        
+        .head__item-h {
+            font-size: 6em;
+        }
+        
+        .head__item-p2 {
+            font-weight: bold;
+            color: #ff9301;
+            font-size: 2.7em;
+        }
+        
+        .head__item-p1 {
+            font-size: 1.2em;
+        }
+        
+        .head__item-p3 {
+            color: #555555;
+            width: 40vw;
+        }
+        /* head */
+        
+        .head {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            height: fit-content;
+            padding: 2em 12vw;
+        }
+        
+        .avatar {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-right: 10vw;
+            width: 20em;
+        }
+        
+        .circle {
+            position: absolute;
+            top: -15vw;
+            right: -17vw;
+            width: 63vw;
+            height: 60vw;
+            border-radius: 50%;
+            background-color: rgb(255, 206, 147);
+        }
+        /* links */
+        
+        nav {
+            display: flex;
+        }
+        
+        nav a:hover,
+        nav a:focus {
+            border-bottom: #ff9301 solid 3px;
+            padding-bottom: 10px;
+        }
+        
+        nav a {
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            font-size: 1em;
+            margin-right: 0.7em;
+            color: #555555;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            width: fit-content;
+            height: fit-content;
+            padding: 2vw 0vw;
+        }
+        /* main */
+        /* biografy -- grid */
+        
+        .biography {
+            background-color: #eeeeee;
+            padding: 2em 12vw;
+            padding-top: 5em;
+            padding-bottom: 3em;
+        }
+        
+        .biography p {
+            padding-bottom: 1em;
+        }
+        /* bio items */
+        
+        .biography__item {
+            display: grid;
+            column-gap: 1em;
+            grid-template-rows: 4em 6em 5em 3em 3em;
+        }
+        
+        .biography__item>.biography__item--p3 {
+            padding-bottom: 4em;
+        }
+        
+        .biography__item--img {
+            background-color: #ff9301;
+            width: 15em;
+            border-radius: 50%;
+            grid-column: 1/1;
+            grid-row: 1/4;
+        }
+        
+        .biography__item--img,
+        .biography__item--p1,
+        .biography__item--p2 {
+            margin-right: 15px;
+        }
+        
+        .biography__item--head {
+            padding: 0em;
+            padding-top: 1em;
+            grid-column: 2/end;
+            grid-row: 1/1;
+        }
+        
+        .biography__item--p1 {
+            font-weight: bold;
+            font-size: 2em;
+            text-align: center;
+            color: #0b0b15;
+            grid-column: 1/1;
+            grid-row: 4/4;
+            padding: 0;
+        }
+        
+        .biography__item--p2 {
+            font-size: 1em;
+            text-align: center;
+            color: #ff9301;
+            grid-column: 1/1;
+            grid-row: 5/5;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+        
+        .biography__item--p3 {
+            color: #555555;
+            grid-column: 2/end;
+            grid-row: 2/end;
+        }
+        /* border  */
+        
+        .border {
+            background-image: url(border-dark.png);
+            background-size: auto 0.5em;
+            background-repeat: repeat-x;
+            height: 1em;
+            background-color: #eeeeee;
+        }
+        /* what i do -- grid */
+        
+        .whatido_section {
+            background-color: #eeeeee;
+            padding: 2em 12vw;
+            padding-bottom: 0;
+        }
+        
+        .whatido {
+            display: grid;
+            gap: 1em;
+            padding: 1em 0em;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .whatido h3 {
+            padding: 1em 0em;
+        }
+        
+        .whatido__item {
+            background-color: white;
+            padding: 8%;
+            border-radius: 0.7em;
+            overflow: hidden;
+        }
+        
+        .whatido__img {
+            background-color: #ff9301;
+            width: 10em;
+            height: 10em;
+            margin-top: -35%;
+            margin-left: -30%;
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        .whatido__img::before {
+            display: inline-block;
+            position: absolute;
+            width: 5em;
+            height: 5em;
+            bottom: 10%;
+            right: 20%;
+        }
+        
+        .whatido__item--first .whatido__img::before {
+            content: url('pencil-alt-solid.svg');
+        }
+        
+        .whatido__item--second .whatido__img::before {
+            content: url('bullseye-solid.svg');
+        }
+        
+        .whatido__item--third .whatido__img::before {
+            content: url('desktop-solid.svg');
+        }
+        /* awards -- grid */
+        
+        .awards_section {
+            background-color: #eeeeee;
+            padding: 2em 12vw;
+        }
+        
+        .awards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 1em;
+            padding: 1em 0em;
+        }
+        
+        .awards__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            height: 5em;
+            background-color: white;
+            padding: 2em 0.2em;
+            border-radius: 0.7em;
+        }
+        
+        .trophy {
+            width: 3em;
+        }
+        /* experience -- flex box */
+        
+        .experience_section {
+            padding: 2em 12vw;
+        }
+        
+        .experience__item {
+            background-color: #ff9301;
+            border: solid #ff9301 0.5em;
+            margin-top: 1em;
+            width: max-content;
+            border-radius: 0.5em;
+            color: white;
+        }
+        
+        .experience__item--parttime {
+            background-color: #bbbbbb;
+            border-color: #bbbbbb;
+        }
+        
+        .row {
+            display: flex;
+            background-color: #eeeeee;
+            border-radius: 1em;
+            height: 10em;
+            margin: 1em 0em;
+            padding: 1em;
+        }
+        
+        .column {
+            flex: 1;
+            display: flex;
+            margin: 0.6em;
+            padding: 1em;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .column h3 {
+            padding: 0;
+        }
+        
+        .column:nth-child(2) {
+            flex-basis: calc(55% - 5px);
+            border-left: solid #bbbbbb 0.01em;
+        }
+        /* my partfolio -- grid */
+        
+        .portfolio_section {
+            padding: 2em 12vw;
+        }
+        
+        .portfolio__item>p,
+        h3 {
+            padding: 0;
+            padding-top: 3%;
+        }
+        
+        .portfolio__item>time {
+            padding: 0;
+            font-size: 0.8em;
+        }
+        
+        .portfolio__item>img {
+            width: 100%;
+        }
+        
+        .portfolio__item {
+            display: flex;
+            flex-direction: column;
+            max-width: 640px;
+            width: 100%;
+        }
+        
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+            justify-content: center;
+            padding-top: 1em;
+        }
+        /* contact section */
+        
+        .contact_section {
+            background-color: #eeeeee;
+            padding: 2em 12vw;
+        }
+        /* contact information */
+        
+        .contact__info h3 {
+            padding: 1em 0em;
+        }
+        /* icons for cont inf*/
+        
+        address {
+            display: grid;
+            grid-template-columns: 1fr 20fr;
+            padding-top: 1em;
+            gap: 1em;
+        }
+        
+        address a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #0b0b15;
+            font-style: normal;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        address p {
+            font-style: normal;
+            font-weight: bold;
+            color: #0b0b15;
+        }
+        
+        address>img {
+            height: 25px;
+            width: 25px;
+        }
+        /* contact -- say something table */
+        
+        .contact__table {
+            display: grid;
+            row-gap: 1em;
+            grid-area: table;
+        }
+        
+        .contact__item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 3em 3em 5em;
+            row-gap: 0.8em;
+        }
+        
+        .contact__item-name {
+            display: flex;
+            grid-row: 1;
+            grid-column: 1;
+            padding-right: 0.5em;
+        }
+        
+        .contact__item-email {
+            display: flex;
+            grid-row: 1;
+            grid-column: 2;
+            padding-left: 0.5em;
+        }
+        
+        .contact__item-subject {
+            display: flex;
+            grid-row: 2;
+            grid-column: 1/end;
+        }
+        
+        .contact__item-comment {
+            display: flex;
+            grid-row: 3/end;
+            grid-column: 1/end;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="subject"] {
+            height: 3em;
+        }
+        
+        textarea {
+            height: 5em;
+            padding-top: 1em;
+            resize: vertical;
+        }
+        
+        input,
+        textarea {
+            font-size: 15px;
+            border: none;
+            outline: none;
+            cursor: default;
+            font-family: system-ui;
+            border: 1px solid #bbbbbb;
+            padding-left: 1em;
+            width: 100%;
+        }
+        /* button */
+        
+        button {
+            padding: 3%;
+            width: fit-content;
+            color: white;
+            background-color: black;
+            border-radius: 0.3em;
+            border-style: none;
+        }
+        
+        button:hover,
+        button:focus {
+            background-color: #ff9301;
+        }
+        
+        label {
+            position: absolute;
+            opacity: 0;
+        }
+        
+        .contact__inf {
+            display: flex;
+            flex-direction: column;
+            padding: 0em;
+            grid-area: inf;
+        }
+        
+        .contact__inf>h3 {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .contact__inf>p {
+            color: #555555;
+        }
+        
+        .contact {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1em;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 'inf table' 'map map';
+        }
+        /* map */
+        
+        iframe {
+            display: block;
+            margin: 2em 0vw;
+            border: solid white 0.3em;
+            height: 15em;
+            width: 100%;
+            grid-area: map;
+            filter: grayscale(100%);
+        }
+        /* foot -- flex box */
+        
+        footer {
+            display: flex;
+            border-top: solid #bbbbbb 0.1em;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 4vw;
+        }
+        
+        .social_media {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .social_media a img {
+            height: 2em;
+        }
+        
+        .footer_p {
+            text-align: right;
+            font-size: 0.9em;
+            color: #555555;
+        }
+        /* media */
+        /* large screen */
+        
+        @media screen and (max-width: 1119px) and (min-width:960px) {
+            /* head */
+            .head {
+                padding: 1em 6vw;
+            }
+            .avatar {
+                margin-right: 6vw;
+            }
+            .circle {
+                width: 63vw;
+                height: 60vw;
+            }
+            .head__item {
+                width: 50%;
+            }
+            .head__item-h {
+                font-size: 5em;
+            }
+            .head__item-p2 {
+                font-size: 1.8em;
+            }
+            /* biography */
+            .biography {
+                padding: 2em 6vw;
+            }
+            .biography__item--head {
+                padding-bottom: 0.2em;
+            }
+            /* what do i do */
+            .whatido__img {
+                width: 8.5em;
+                height: 8.5em;
+            }
+            .whatido_section {
+                padding: 2em 6vw;
+            }
+            /* experience */
+            .experience_section {
+                padding: 2em 6vw;
+            }
+            /* awards */
+            .awards_section {
+                padding: 2em 6vw;
+            }
+            /* portfolio */
+            .portfolio_section {
+                padding: 2em 6vw;
+            }
+            /* contact */
+            .contact_section {
+                padding: 2em 6vw;
+            }
+            iframe {
+                width: 88vw;
+            }
+        }
+        /* medium screen */
+        
+        @media screen and (max-width: 959px) {
+            /* head */
+            .circle {
+                display: none;
+            }
+            .avatar {
+                display: none;
+            }
+            .head__item {
+                width: fit-content;
+            }
+            .head {
+                padding: 1em 4vw;
+            }
+            .head__item-p3 {
+                width: 100%;
+            }
+            .head__item-h {
+                font-size: 5em;
+            }
+            .head__item-p2 {
+                font-size: 1.5em;
+            }
+            /* navigatio */
+            nav ul {
+                width: 100%;
+                height: fit-content;
+            }
+            /* what do i do */
+            .whatido__img {
+                width: 10em;
+                height: 10em;
+                margin-top: -25%;
+                margin-left: -20%;
+            }
+            .whatido__img::before {
+                width: 7em;
+                height: 7em;
+            }
+            /* biography */
+            .biography {
+                padding: 1em 4vw;
+            }
+            .biography__item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .biography__item--p1,
+            .biography__item--p2 {
+                padding: 0;
+            }
+            .biography__item--head {
+                display: block;
+                text-align: left;
+                width: 100%;
+                padding: 1em 0em;
+            }
+            .biography__item--img {
+                margin-right: 0;
+                width: 13em;
+            }
+            /* experience */
+            .experience_section {
+                padding: 1em 4vw;
+            }
+            .row {
+                display: block;
+                height: fit-content;
+            }
+            .column {
+                display: block;
+                height: fit-content;
+                padding: 0.5em;
+            }
+            .column:nth-child(2) {
+                border-left: none;
+            }
+            /* what do i do */
+            .whatido {
+                padding: 1em;
+                grid-template-columns: 1fr;
+            }
+            .whatido_section {
+                padding: 1em 4vw;
+            }
+            /* contact */
+            .contact_section {
+                padding: 1em 4vw;
+            }
+            button {
+                margin-top: 3%;
+            }
+            .contact {
+                grid-template-areas: 'inf' 'table' 'map';
+                grid-template-columns: 100%;
+                grid-row-gap: 2em;
+            }
+            .contact__item {
+                grid-row-gap: 1em;
+                grid-template-rows: 3em 3em 5em;
+                grid-template-columns: 50% 50%;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="subject"] {
+                height: 3em;
+            }
+            textarea {
+                height: 5em;
+            }
+            iframe {
+                width: 100%;
+                height: 10em;
+                margin: 0;
+            }
+            .portfolio_section {
+                padding: 1em 4vw;
+            }
+            .portfolio {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .portfolio__item {
+                max-width: 440px;
+            }
+            .awards_section {
+                padding: 1em 4vw;
+            }
+            .awards {
+                column-gap: 1em;
+                padding: 1em;
+            }
+        }
+        /* small screen  */
+        
+        @media screen and (max-width: 559px) {
+            /* head */
+            .head__item-h {
+                font-size: 3em;
+            }
+            /* navigatio */
+            nav a {
+                background-color: #ff9301;
+                height: 3em;
+                border-radius: 0.5em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            nav ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.5em;
+                padding: 4vw;
+                width: 100%;
+                height: fit-content;
+            }
+            nav a:hover,
+            nav a:focus {
+                background-color: rgb(255, 228, 179);
+                border-bottom: none;
+                padding: 0;
+            }
+            nav a {
+                color: #0b0b15;
+                font-size: 0.9em;
+                padding-right: 0;
+            }
+            .contact__item {
+                grid-row-gap: 1em;
+                grid-template-rows: 3em 3em 3em;
+                grid-template-columns: 100%;
+            }
+            .contact__item-name {
+                grid-row: 1;
+                grid-column: 1;
+                padding-right: 0;
+            }
+            .contact__item-email {
+                grid-row: 2;
+                grid-column: 1;
+                padding-left: 0;
+            }
+            .contact__item-subject {
+                grid-row: 3;
+                grid-column: 1;
+            }
+            .contact__item-comment {
+                grid-row: 4;
+                grid-column: 1;
+            }
+            .awards_section {
+                padding: 1em 4vw;
+            }
+            .awards {
+                grid-template-columns: 1fr;
+                gap: 1em;
+            }
+            .portfolio {
+                grid-template-columns: 1fr;
+            }
+            .portfolio__item {
+                max-width: 640px;
+            }
+            .portfolio_section {
+                padding: 1em 4vw;
+            }
+        }
